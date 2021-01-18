@@ -1,1 +1,1 @@
-This file is to use for FastReport. Several methods define how to bind data to FastReport programmatically. I also added my code library how to use these methods such as SqlBinding_Rapor or etc.
+These files include some methods which are FastReport Data Bind, DevExpress Charts and others. I tried to use these items manually that's why didn't use any "run designer" scheme. I also added my code library how to use these methods such as SqlBinding_Rapor or etc.

@@ -91,18 +91,21 @@ namespace TeknikServis.Kutuphaneler
         }
 
 
+        public SqlDataReader SqlExecuteReader2(string sorgu)
+        {
+            using (SqlCommand cmd = new SqlCommand(sorgu, Connector()))
+            {
+                SqlDataReader sdr = cmd.ExecuteReader(CommandBehavior.CloseConnection);
+                return sdr;
+            }
+        }
+
+
         public void Dispose()
         {
             GC.SuppressFinalize(this);
         }
 
-        public SqlDataReader SqlExecuteReader2(string sorgu)
-        {
-            using (SqlCommand cmd = new SqlCommand(sorgu, Connector()))
-            {                
-                SqlDataReader sdr = cmd.ExecuteReader(CommandBehavior.CloseConnection);
-                return sdr;
-            }
-        }
+       
     }
 }
